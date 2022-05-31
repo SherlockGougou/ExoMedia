@@ -1,10 +1,6 @@
 apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
 
-afterEvaluate {
-  apply from: '../gradle/release/publish.gradle'
-}
-
 dependencies {
   api "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlinVersion"
 
@@ -30,8 +26,6 @@ android {
     targetSdkVersion 31
 
     vectorDrawables.useSupportLibrary = true
-
-    buildConfigField "String", "EXO_MEDIA_VERSION_NAME", "\"${rootProject.ext.libraryInfo.versionName}\""
   }
 
   sourceSets {

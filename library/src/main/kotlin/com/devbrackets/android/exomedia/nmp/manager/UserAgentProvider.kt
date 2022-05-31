@@ -2,7 +2,6 @@ package com.devbrackets.android.exomedia.nmp.manager
 
 import android.annotation.SuppressLint
 import android.os.Build
-import com.devbrackets.android.exomedia.BuildConfig
 
 /**
  * Provides the user agent to use when communicating over a network
@@ -12,7 +11,7 @@ open class UserAgentProvider {
     @SuppressLint("DefaultLocale")
     val defaultUserAgent = String.format(
         "ExoMedia %s / Android %s / %s",
-        BuildConfig.EXO_MEDIA_VERSION_NAME,
+        "5.0.0",
         Build.VERSION.RELEASE,
         Build.MODEL
     )
